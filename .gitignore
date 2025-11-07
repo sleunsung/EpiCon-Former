@@ -1,0 +1,8 @@
+# Ignore large raw data files
+git/data/*.csv
+git/data/*.npy
+git/data/*.gtf
+git/checkpoints/**/*.pt
+*.log
+*.ipynb_checkpoints
+__pycache__/

@@ -1,50 +1,55 @@
+<h1 align="left">EpiCon-Former: A Contrastive Transformer for Generalizable Epigenomic Signal Representation</h1>
+
+
 ## **1. Motivation**
 
 <p align="center">
-  <img width="628" height="357" alt="image" src="https://github.com/user-attachments/assets/b63a98c0-3d1e-459e-8665-a02b75fc0f49" />
+	<img width="2928" height="1787" alt="readme_motivation" src="https://github.com/user-attachments/assets/b16a5b87-b652-4836-b566-71056e6ef725" />
 </p>
 
-Recent progress in deep learning has shown strong performance in biological data analysis, despite challenges such as limited labels, high noise, and cell-type variability.
-Histone modification signals contain rich regulatory information, but require robust representation learning to capture meaningful biological patterns.
-EpiCon-Former addresses these challenges by applying supervised contrastive learning to learn noise-tolerant and generalizable epigenomic embeddings from large-scale histone datasets.
+Biological datasets often suffer from scarce labels and experimental noise, making robust representation learning essential.
+Histone modification data provide abundant and meaningful signals, but require models capable of capturing their complex patterns.
+EpiCon-Former tackles this problem using supervised contrastive learning to learn generalizable and biologically grounded epigenomic embeddings.
 
 ---
 
-## **2. Overview**
+## **2. Overview of the EpiCon-Former architecture**
 
 <p align="center">
-  <img width="672" height="268" src="https://github.com/user-attachments/assets/59827765-34ca-450f-b968-755b28f21923" />
+	<img width="3084" height="1333" alt="readme_overview" src="https://github.com/user-attachments/assets/ad3158e4-a6d9-4dda-8037-4aeb5f1ed53e" />
 </p>
 
 
-EpiCon-Former is a Transformer-based framework designed to learn universal representations of histone modification signals.
-The model leverages pseudo-label–guided Supervised Contrastive Learning (SupCon) to construct a structured embedding space, forming both instance-level and class-level positive pairs.
-To enhance robustness against experimental noise, the framework incorporates multiple augmentation strategies, including signal shifting, dropout, Gaussian noise injection, and scaling.
+EpiCon-Former is a Transformer-based model for learning universal representations of histone modification signals.
+It uses pseudo-label–guided Supervised Contrastive Learning (SupCon) to build a well-structured embedding space through both instance-level and class-level positive pairs.
+To improve noise robustness, the framework applies strong augmentations such as signal shifting, dropout, scaling, and Gaussian noise.
 
-The pretrained encoder serves as a general-purpose backbone that can be fine-tuned for various genomic prediction tasks such as chromatin compartment prediction, promoter identification, and chromatin state classification.
+The pretrained encoder serves as a flexible backbone that can be fine-tuned for downstream genomic tasks, including compartment prediction, promoter classification, and chromatin state inference.
 
 ---
 
 ## **3. Objective**
 
 <p align="center">
-  <img width="421" height="106" src="https://github.com/user-attachments/assets/a9eb6247-585c-45b3-aa13-e7639818dfff" />
+	<img width="2122" height="623" alt="readme_objective" src="https://github.com/user-attachments/assets/153b6adc-2cee-4205-a37c-a65239dda8b6" />
 </p>
 
 This repository provides downstream pipelines built on top of the pretrained EpiCon-Former encoder, with three primary objectives:
-	•	EpiCon-Comp — Fine-tune EpiCon-Former to predict A/B chromatin compartments and capture large-scale 3D genome organization.
-	•	EpiCon-PR — Adapt the encoder for promoter vs. non-promoter classification to evaluate promoter activity.
-	•	EpiCon-State — Predict ChromHMM chromatin states to assess the biological interpretability of learned representations.
+
+- **EpiCon-Comp** — Fine-tune EpiCon-Former to predict A/B chromatin compartments and capture large-scale 3D genome organization.
+- **EpiCon-PR** — Adapt the encoder for promoter vs. non-promoter classification to evaluate promoter activity.
+- **EpiCon-State** — Predict ChromHMM chromatin states to assess the biological interpretability of learned representations.
 
 ---
 
 ## **4. Dependencies**
 
+---
 
 ## **5. Download Model & Dataset**
 
+---
+
+## **6. License**
 
 
-
-> Note: Some datasets may require manual download from ENCODE or user-provided preprocessing steps.
->

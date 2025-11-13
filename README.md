@@ -11,7 +11,6 @@ Biological datasets often suffer from scarce labels and experimental noise, maki
 Histone modification data provide abundant and meaningful signals, but require models capable of capturing their complex patterns.
 EpiCon-Former tackles this problem using supervised contrastive learning to learn generalizable and biologically grounded epigenomic embeddings.
 
----
 
 ## **2. Overview of the EpiCon-Former architecture**
 
@@ -26,7 +25,6 @@ To improve noise robustness, the framework applies strong augmentations such as 
 
 The pretrained encoder serves as a flexible backbone that can be fine-tuned for downstream genomic tasks, including compartment prediction, promoter classification, and chromatin state inference.
 
----
 
 ## **3. Objective**
 
@@ -40,15 +38,11 @@ This repository provides downstream pipelines built on top of the pretrained Epi
 - **EpiCon-PR** — Adapt the encoder for promoter vs. non-promoter classification to evaluate promoter activity.
 - **EpiCon-State** — Predict ChromHMM chromatin states to assess the biological interpretability of learned representations.
 
----
 
 ## **4. Dependencies**
 
----
 
 ## **5. Download Model & Dataset**
-
----
 
 ## **6. License**
 

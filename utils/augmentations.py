@@ -4,13 +4,6 @@ def strong_augment(x, max_shift=3, drop_prob=0.3, scale_range=(0.6, 1.4), noise_
     """
     Apply strong data augmentations to an input matrix.
     Includes random shift, dropout, scaling, and Gaussian noise.
-    
-    Args:
-        x (np.ndarray): Input matrix of shape (window_size, n_features)
-        max_shift (int): Maximum number of bins to roll (shift)
-        drop_prob (float): Probability of dropping individual positions
-        scale_range (tuple): Multiplicative scaling range per feature
-        noise_std (float): Standard deviation for Gaussian noise
 
     Returns:
         np.ndarray: Augmented matrix (same shape as input)
